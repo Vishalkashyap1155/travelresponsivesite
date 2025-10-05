@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism site by VKR</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        .container{
+            height: auto;
+            border-radius: 10px;
+            background: white;
+        }
+
+        .navbar{
+            display: flex;
+            padding: 10px 6%;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+        }
+
+        .navbar h1{
+            padding: 0;
+            margin: 0;
+            
+        }
+
+     
+        
+        
+
+        .navbar ul li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .navbar ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .posterimage{
+            height: 55vh;
+            background: linear-gradient(rgba(12, 12, 12, 0.541),rgba(16, 16, 16, 0.486)) ,url(images/hero\ image.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            color:white;
+            text-align: center;
+            
+            
+        }
+        .posterimage div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            animation: zoom 5s linear forwards ;
+            opacity: 0;
+        }
+
+         @keyframes zoom{
+            0% {opacity: 0;}
+            20%{opacity: 0.2;}
+            40%{opacity: 0.4;}
+            60%{opacity: 0.6;}
+            80%{opacity: 0.8;}
+            100%{opacity: 1;}
+        } 
+
+
+
+        .posterimage div p, h1{
+            margin-bottom: 15px;
+        }
+
+        .posterimage div p{
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .posterimage div h1{
+            font-size: 50px;
+        }
+
+        .posterimage div button{
+            padding: 8px 25px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+        }
+
+        @media  screen and (max-width:600px) {
+            .posterimage div h1{
+                font-size: 30px;
+            }
+
+            .posterimage div p{
+                font-size: 17px;
+            }
+
+            .posterimage div button{
+                font-size: 12px;
+            }
+            
+        }
+
+        .posterimage div button:hover{
+            cursor: pointer;
+        }
+
+        .main{
+            padding: 0 6%;
+            margin: 2% 0;
+        }
+
+
+
+        .gridContainer{
+            display: grid;
+            height: auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-row: 100px;
+            gap: 10px;
+        }
+
+        .main h2{
+            margin: 20px 0;
+        }
+
+        .gridContainer .items{
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .gridContainer .items img{
+            width: 100%;
+            height: 80%;
+            border-radius: 10px;
+
+        }
+
+        .gridContainer .items p{
+            font-size: 20px;
+            padding: 5px 0;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width:600px) {
+
+            
+        .navbar h1{
+            font-size: 23px;
+        }
+            .gridContainer{
+                grid-template-columns: 1fr;
+            }
+
+              .main h2{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+            
+        }
+
+        .footer{
+width: 100%;
+padding:0 6%;
+background:grey;
+
+
+}
+
+.footer-container{
+padding: 20px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+}
+
+.footer-container .footer-section{
+margin-bottom: 20px;
+align-self: self-start;
+}
+
+.footer-container .footer-section h3{
+color: white;
+margin-bottom: 10px;
+font-size: 25px;
+}
+
+.footer-container .footer-section p{
+color: black;
+font-size: 15px;
+font-weight: 400;
+}
+
+.footer .footer-container .about{
+flex-basis: 45%;
+}
+
+.footer .footer-container .about p{
+margin-bottom: 5px;
+}
+
+.footer-bottom{
+padding: 10px 0;
+width: 100%;
+text-align: center;
+font-size: large;
+font-weight: 600;
+}
+
+@media screen and (max-width:800px) {
+    .footer-container{
+    display: block;
+
+    }
+
+      .gridContainer .items p{
+            font-size: 15px;
+        }
+
+    .footer-container .footer-section h3{
+font-size: 15px;
+}
+
+.footer-container .footer-section p{
+font-size: 14px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Travel</h1>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Destination</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="posterimage">
+        <div>
+            <h1>EXPLORE THE WORLD</h1>
+            <P>Discover new places and experiences</P>
+            <button class="btn">Read more</button>
+        </div>
+        </div>
+
+        <div class="main">
+
+            
+            <div>
+
+            <h2>Popular Destinations</h2>
+
+            <div class="gridContainer">
+
+
+            <div class="items item1">
+                <img src="images/taj.jpg" alt="">
+                <p>India</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/dubai.jpg" alt="">
+                <p>Dubai</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/hero image.jpg" alt="">
+                <p>Swizerland</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/paris tower.jpg" alt="">
+                <p>Paris</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/river.jpg" alt="">
+                <p>Europe</p>
+            </div>
+
+
+            
+
+<!-- 
+            <div class="items item2">image 2</div>
+            <div class="items item3">image 3</div>
+            <div class="items item4">image 4</div> -->
+            </div>
+            </div>
+
+
+
+
+            <div>
+
+
+            <div class="gridContainer">
+
+
+            <div class="items item1">
+                <img src="images/japan.avif" alt="">
+                <p>Japan</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/fujimount.jpg" alt="">
+                <p>Fuji</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/norway.jpg" alt="">
+                <p>Norway</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/mexico  city.jpg" alt="">
+                <p>Mexico city</p>
+            </div>
+
+             <div class="items item1">
+                <img src="images/veitnam.webp" alt="">
+                <p>Veitnam</p>
+            </div>
+
+
+            
+
+<!-- 
+            <div class="items item2">image 2</div>
+            <div class="items item3">image 3</div>
+            <div class="items item4">image 4</div> -->
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        <div class="footer-container">
+
+        <div class="footer-section about">
+        <h3>About</h3>
+        <p>We help travelers explore the world by finding the best destionations,tours and experier.</p>
+        <p>“What started as a small blog for travel lovers has now become a community of explorers.
+At Travel by VKR, our mission is simple — inspire you to see the world and live every moment to the fullest.”</p>
+        </div>
+<!-- .footer{
+width: 100%;
+padding:0 6%;
+background:grey;
+
+
+} -->
+
+<div class="footer-section quicklinks">
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>Destination</p>
+        <p>About</p>
+        <p>Contact</p>
+        </div>
+
+
+        <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: vkrandteam@gmail.com</p>
+        <p>Phone: +91-9116356994</p>
+        <p>Location: Jaipur, Rajasthan, India</p>
+        </div>
+
+
+        </div>
+
+         <div class="footer-bottom">
+    <p>© 2025 Travel by VKR | All Rights Reserved</p>
+  </div>
+        </div>
+    </div>
+</body>
+</html>
