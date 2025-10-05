@@ -1,0 +1,1 @@
+This is a travel site and it is also responsive easily open on mobile and table.
